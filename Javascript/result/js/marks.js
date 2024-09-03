@@ -1,27 +1,29 @@
-function marks(){
-
+function marks(event){
+    event.preventDefault();
     var eng = parseInt(document.getElementById("english").value);
     var phy = parseInt(document.getElementById("physics").value);
     var chem = parseInt(document.getElementById("chem").value);
     var math = parseInt(document.getElementById("maths").value);
     var comp = parseInt(document.getElementById("comp").value);
 
-    add = eng + phy + chem + math + comp;
+    add = +eng + +phy + +chem + +math + +comp;
     perc = (add*100/600);
-    document.write("Total Marks = " +add +"<br>");
-    document.write("Total Percentage = " +perc +"%" +"<br>");
-    document.write("Result = ");
+    document.getElementById("add").innerHTML = add;
+    document.getElementById("perc").innerHTML = perc;
+    total_grade = document.getElementById("grade");
     
+
+
     if(perc>80)
     {
-        document.write("Grade A");
+        total_grade.innerHTML = "Grade A";
     }
     else if(perc>60)
     {
-        document.write("Grade B");
+        total_grade.innerHTML = "Grade B";
     }
     else{
-        document.write("Grade C");
+        total_grade.innerHTML = "Grade C";
     }
 
     
