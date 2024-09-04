@@ -1,4 +1,4 @@
-function marks(event){
+function marks(){
     event.preventDefault();
     var eng = parseInt(document.getElementById("english").value);
     var phy = parseInt(document.getElementById("physics").value);
