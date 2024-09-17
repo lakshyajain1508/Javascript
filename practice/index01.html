@@ -1,60 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Result</title>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
 
-    <script>
-        console.log("1st Unit Test Result")
-       
-        English = prompt("Enter Scored Marks in english")
-        Maths = prompt("Enter Scored Marks in maths")
-        Economics = prompt("Enter Scored Marks in economics")
-        Computer = prompt("Enter Scored Marks in computer")
-        Evs = prompt("Enter Scored Marks in evs ")
-        Science = prompt("Enter Scored Marks in science")
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
 
-        English = +English;
-        Maths = +Maths;
-        Economics = +Economics;
-        Computer = +Computer;
-        Evs = +Evs;
-        Science = +Science;
+.left {
+  width: 50%;
+  padding: 20px;
+}
 
-        console.log("ENGLISH = " +English)
-        console.log("MATHS = " +Maths)
-        console.log("ECONOMICS = " +Economics)
-        console.log(" COMPUTER = " +Computer)
-        console.log(" EVS = " +Evs)
-        console.log("SCIENCE = " +Science)
+.right {
+  width: 50%;
+  padding: 20px;
+}
 
-        add = English + Maths + Economics + Computer + Evs + Science 
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
 
+.subject {
+  margin-bottom: 10px;
+}
 
-        console.log("Total Marks Scored = " +add)
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-        div = add/120*100
+.label {
+  width: 100px;
+  font-weight: bold;
+}
 
-        console.log("Percentage Scored = " +div)
+.input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-        if(div>70){
-            console.log("You Scored A Grade")
-        }
-        else if (div<70 && div>60){
-            console.log("You Scored B Grade")
-        }
-        else if (div<60 && div>40){
-            console.log("You Scored C Grade")
-        }
-        else {
-            console.log("You are fail")
-        }
-        
-        
-    </script>
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+</style>
 </head>
 <body>
-    
+
+<div class="container">
+  <div class="left">
+    <h2>Semester 1</h2>
+    <div class="subject">
+      <div class="input-group">
+        <span class="label">English</span>
+        <input type="number" class="input" id="englishMarks" placeholder="Out of 100">
+      </div>
+    </div>
+    <div class="subject">
+      <div class="input-group">
+        <span class="label">Physics</span>
+        <input type="number" class="input" id="physicsMarks" placeholder="Out of 100">
+      </div>
+    </div>
+    <div class="subject">
+      <div class="input-group">
+        <span class="label">Chemistry</span>
+        <input type="number" class="input" id="chemistryMarks" placeholder="Out of 100">
+      </div>
+    </div>
+    <div class="subject">
+      <div class="input-group">
+        <span class="label">Maths</span>
+        <input type="number" class="input" id="mathsMarks" placeholder="Out of 100">
+      </div>
+    </div>
+    <div class="subject">
+      <div class="input-group">
+        <span class="label">Computer Science</span>
+        <input type="number" class="input" id="computerScienceMarks" placeholder="Out of 200">
+      </div>
+    </div>
+    <button class="button" onclick="calculateResult()">View Result</button>
+  </div>
+
+  <div class="right">
+    <h2>Check Your Result</h2>
+    <div class="result">
+      <p>Total Marks = <span id="totalMarks"></span></p>
+      <p>Total Percentage = <span id="totalPercentage"></span>%</p>
+      <p>Grade Obtained = <span id="grade"></span></p>
+    </div>
+  </div>
+</div>
+
+<script>
+function calculateResult() {
+  // Get marks from input fields
+  var englishMarks = parseInt(document.getElementById("englishMarks").value);
+  var physicsMarks = parseInt(document.getElementById("physicsMarks").value);
+  var chemistryMarks = parseInt(document.getElementById("chemistryMarks").value);
+  var mathsMarks = parseInt(document.getElementById("mathsMarks").value);
+  var computerScienceMarks = parseInt(document.getElementById("computerScienceMarks").value);
+
+  // Calculate total marks
+  var totalMarks = englishMarks + physicsMarks + chemistryMarks + mathsMarks + computerScienceMarks;
+
+  // Calculate total percentage
+  var totalPercentage = (totalMarks / 500) * 100;
+
+  // Determine grade
+  var grade;
+  if (totalPercentage >= 90) {
+    grade = "A+";
+  } else if (totalPercentage >= 80) {
+    grade = "A";
+  } else if (totalPercentage >= 70) {
+    grade = "B";
+  } else if (totalPercentage >= 60) {
+    grade = "C";
+  } else if (totalPercentage >= 50) {
+    grade = "D";
+  } else {
+    grade = "F";
+  }
+
+  // Display results
+  document.getElementById("totalMarks").textContent = totalMarks;
+  document.getElementById("totalPercentage").textContent = totalPercentage.toFixed(2);
+  document.getElementById("grade").textContent = grade;
+}
+</script>
+
 </body>
 </html>
