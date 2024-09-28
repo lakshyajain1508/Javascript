@@ -21,68 +21,46 @@
     />
 
     <script>
-        
 
-        
+      function data(){
+        course = ["python","java","c++"]
 
+        for(a=0; a<course.length;a++)
+        {
+          document.getElementById("item").innerHTML += "<li>" + course[a] + "</li>";
+        }
+      }
 
     </script>
-
+    <style>
+      li{
+        color: red;
+      }
+      ul{
+        list-style: none;
+        text-align:left;
+      }
+    </style>
   </head>
   <body>
     <div class="container p-5">
-      <div class="row">
+      <div class="row justify-content-sm-center">
         <div class="col-sm-4">
-          <div class="card bg-dark text-light border border-1 border-white p-2">
-            <div class="card-header bg-dark">
-              <img src="img/image.png" class="card-img-top" alt="..." />
+          <div class="card bg-dark border border-1 border-white p-3">
+            <div class="card-header bg-info">
+              <img src="img/image copy.png" class="card-img-top" alt="..." />
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+            <div class="card-body bg-black">
+              <h5 class="card-title text-danger text-sm-start">Courses</h5>
+              <p class="card-text text-sm-start">
+                <ul id="item"></ul>
               </p>
             </div>
-            <div class="card-footer">
-              <button class="btn btn-outline-warning">₹ 300 /-</button>
+            <div class="card-footer bg-danger">
+              <button class="btn btn-warning p-1 w-100" onclick="data()">View Courses</button>
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card bg-dark text-light border border-1 border-white p-2">
-              <div class="card-header bg-dark">
-                <img src="img/image.png" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-outline-warning">₹ 300 /-</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card bg-dark text-light border border-1 border-white p-2">
-              <div class="card-header bg-dark">
-                <img src="img/image.png" class="img-fluid" alt="..." />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-outline-warning">₹ 300 /-</button>
-              </div>
-            </div>
-          </div>
       </div>
     </div>
   </body>
