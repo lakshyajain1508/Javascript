@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <script>
+
+        // Basic Function
+        
+        function info(){
+
+            document.write("Hello, Lakshya!! <br>")
+            document.write("This is a basic function example.<br>")
+
+        }
+        
+        // call function
+        info()
+        document.write("<br>")
+        // with parameters
+
+        function add(a,b){
+            document.write("Sum : "+(a+b) + "<br>")
+
+        }
+
+        add(10,20)
+        add(100,200)
+        document.write("<br>")
+
+        function number(){
+            return 42; 
+        }
+
+        const get_number = number();
+        document.write("Returned Number = "+ get_number + "<br>")
+
+        document.write("<br>")
+
+        function name(name = "Guest"){
+            return document.write("Name : " + name + "<br>")
+        }
+
+        name ()
+        name("Rahul")
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
