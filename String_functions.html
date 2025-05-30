@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+</head>
+
+<body>
+
+    <div class="length-container">
+
+        <input type="text" id="t_data">
+        <button onclick="lenght_01()">Length</button>
+        <h2>Length of data = <span id="data_display"></span></h2>
+
+        <script>
+
+            function lenght_01() {
+
+                const data = document.getElementById("t_data").value;
+                const data_length = data.length;
+
+                document.getElementById("data_display").innerHTML = data_length;
+
+            }
+
+        </script>
+    </div>
+
+
+    <div class="char-container">
+
+        <input type="text" id="t_data1">
+        <input type="text" id="char_data">
+        <button onclick="charAt()">Chracter Position</button>
+        <h2>Character at the specified index = <span id="data_display1"></span></h2>
+
+        <script>
+
+            function charAt() {
+
+                const data1 = document.getElementById("t_data1").value;
+                const data_ch = document.getElementById("char_data").value;
+                const data_char = data1.charAt(data_ch);
+                document.getElementById("data_display1").innerHTML = data_char;
+
+            }
+
+        </script>
+
+    </div>
+
+    <div class="charcodeat-container">
+        <input type="text" id="t_data2">
+        <input type="text" id="char_data2">
+        <button onclick="char_codeAt()">Decimal Form</button>
+        <h2>Index of the first occurrence of a substring within the string = <span id="data_display2"></span></h2>
+
+        <script>
+
+            function char_codeAt() {
+
+                const data2 = document.getElementById("t_data2").value;
+                const data_ch1 = document.getElementById("char_data2").value;
+                const data_char = data2.charCodeAt(data_ch1);
+                document.getElementById("data_display2").innerHTML = data_char;
+
+            }
+
+        </script>
+    </div>
+
+    <div class="slice-container">
+
+        <input type="text" id="t_data3">
+        <input type="text" id="slice_data1">
+        <input type="text" id="slice_data2">
+        <button onclick="slice_01()">Slice</button>
+        <h2>Slice = <span id="data_display3"></span></h2>
+
+        <script>
+
+            function slice_01() {
+
+                const data3 = document.getElementById("t_data3").value;
+                const slice_data01 = document.getElementById("slice_data1").value;
+                const slice_data02 = document.getElementById("slice_data2").value;
+                const slice_ = data3.slice(slice_data01, slice_data02);
+                document.getElementById("data_display3").innerHTML = slice_;
+
+            }
+        </script>
+
+    </div>
+
+    <div class="uppercase-container">
+
+        <input type="text" id="data4">
+        <button onclick="UpperCase()">Uppercase</button>
+        <h2>UpperCase = <span id="data_display4"></span></h2>
+
+    </div>
+
+    <script>
+        function UpperCase() {
+
+                const data_upper = document.getElementById("data4").value;
+                const data_01 = data_upper.toUpperCase();
+                document.getElementById("data_display4").innerHTML = data_01;
+
+            }
+    </script>
+
+    <div class="lowercase-container">
+        <input type="text" id="data5">
+        <button onclick="LowerCase()">Uppercase</button>
+        <h2>LowerCase = <span id="data_display5"></span></h2>
+    </div>
+
+    <script>
+        function LowerCase() {
+                const data_lower = document.getElementById("data5").value;
+                const data_02 = data_lower.toLowerCase();
+                document.getElementById("data_display5").innerHTML = data_02;
+            }
+    </script>
+</body>
+
+</html>
