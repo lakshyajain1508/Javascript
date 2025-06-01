@@ -1,4 +1,4 @@
-# 8 Array Methods You Must Know
+# Array Methods You Must Know
 
 
 1. **`push()`**: Adds one or more elements to the end of an array and returns the new length of the array.
