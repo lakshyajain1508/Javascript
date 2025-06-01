@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Few Methos</title>
+
+    <script>
+        // Array length
+        const num = [1, 2, 3, 4, 5];
+        document.write("Array Length Examples<br> ");
+        for (i in num) {
+            document.write("<li>"+num[i] + "</li>");
+        }
+        document.write("Length of the array is: " + num.length + "<br>");
+
+        // Array push
+        const color = ["red", "green", "blue"];
+        document.write("<br>Array Push Examples<br>");
+        for (i in color) {
+            document.write("<li>" + color[i] + "</li>");
+        }
+        document.write("After push method<br>");
+        color.push("yellow");
+        for (i in color) {
+            document.write("<li>" + color[i] + "</li>");
+        }
+
+        // Array pop
+        document.write("<br>Array Pop Examples<br>");
+        const colors = ["red", "green", "blue", "yellow"];
+        for (i in colors) {
+            document.write("<li>" + colors[i] + "</li>");
+        }
+        document.write("After pop method<br>");
+        colors.pop();
+        for (i in colors) {
+            document.write("<li>" + colors[i] + "</li>");
+        }
+
+        // Array unshift
+        document.write("<br>Array Unshift Examples<br>");
+        const fruits = ["apple", "banana", "orange"];
+        for (i in fruits) {
+            document.write("<li>" + fruits[i] + "</li>");
+        }
+        document.write("After unshift method<br>");
+        fruits.unshift("mango");
+        for (i in fruits) {
+            document.write("<li>" + fruits[i] + "</li>");
+        }
+
+        // Array shift
+        document.write("<br>Array Shift Examples<br>");
+        const fruit = ["apple", "banana", "orange", "mango"];
+        for (i in fruit) {
+            document.write("<li>" + fruit[i] + "</li>");
+        }
+        document.write("After shift method<br>");
+        fruit.shift();
+        for (i in fruit) {
+            document.write("<li>" + fruit[i] + "</li>");
+        }
+
+        // Array concat
+        document.write("<br>Array Concat Examples<br>");
+        const array1 = [1, 2, 3];
+        document.write("Array 1: ");
+        for (i in array1) {
+            document.write("<li>" + array1[i] + "</li>");
+        }
+        const array2 = [4, 5, 6];
+        document.write("Array 2: ");
+        for(i of array2) {
+            document.write("<li>" + i + "</li>");
+        }
+        const array3 = array1.concat(array2);
+        document.write("After concat method: ");
+        for (i in array3) {
+            document.write("<li>" + array3[i] + "</li>");
+        }
+
+        // Array slice
+        document.write("<br>Array Slice Examples<br>");
+        const name = ["lakshya","avaneet","rugwed","prtaik"];
+        document.write("Original Array: ");
+        for (i in name) {
+            document.write("<li>" + name[i] + "</li>");
+        }
+        const slicedArray = name.slice(3,4);
+        document.write("After slice method from index 3 to 4: ");
+        for (i in slicedArray) {
+            document.write("<li>" + slicedArray[i] + "</li>");
+        }
+        
+        // Array splice
+        document.write("<br>Array Splice Examples<br>");
+        const numbers = [1, 2, 3, 4, 5];
+        document.write("Original Array: ");
+        for (i in numbers) {
+            document.write("<li>" + numbers[i] + "</li>");
+        }
+        numbers.splice(4, 1, 6, 7);
+        document.write("After splice method at index 4, removing 1 element and adding 6, 7: ");
+        for (i in numbers) {
+            document.write("<li>" + numbers[i] + "</li>");
+        }
+
+        // Array join
+
+        document.write("<br>Array Join Examples<br>");
+        const joinArray = ["Hello", "World", "JavaScript"];
+        document.write("Original Array: ");
+        for (i in joinArray) {
+            document.write("<li>" + joinArray[i] + "</li>");
+        }
+        const joinedString = joinArray.join(" ");
+        document.write("After join method with space: " + joinedString + "<br>");
+
+        // Array indexOf
+        document.write("<br>Array IndexOf Examples<br>");
+        const indexArray = ["apple", "banana", "orange"];
+        document.write("Original Array: ");
+        for (i in indexArray) {
+            document.write("<li>" + indexArray[i] + "</li>");
+        }
+        const index = indexArray.indexOf("apple");
+        document.write("Index of 'apple': " + index + "<br>");
+        const index1 = indexArray.indexOf("banana");
+        document.write("Index of 'banana': " + index1 + "<br>");
+        const index2 = indexArray.indexOf("orange");
+        document.write("Index of 'orange': " + index2 + "<br>");
+
+        // Array lastIndexOf
+        document.write("<br>Array LastIndexOf Examples<br>");
+        const lastIndexArray = ["apple", "banana", "orange", "apple"];
+        document.write("Original Array: ");
+        for (i in lastIndexArray) {
+            document.write("<li>" + lastIndexArray[i] + "</li>");
+        }
+        const lastIndex = lastIndexArray.lastIndexOf("apple");
+        document.write("Last index of 'apple': " + lastIndex + "<br>");
+        const lastIndex1 = lastIndexArray.lastIndexOf("orange");
+        document.write("Last index of 'orange': " + lastIndex1 + "<br>");
+        
+        // Array reverse
+        document.write("<br>Array Reverse Examples<br>");
+        const reverseArray = [1, 2, 3, 4, 5];
+        document.write("Original Array: ");
+        for (i in reverseArray) {
+            document.write(reverseArray[i] + " ");
+        }
+        reverseArray.reverse();
+        document.write("<br>After reverse method: ");
+        for (i in reverseArray) {
+            document.write(reverseArray[i] + " ");
+        }
+
+        // Array sort
+        document.write("<br><br>Array Sort Examples<br>");
+        const sortArray = [5, 3, 8, 1, 2];
+        document.write("Original Array: ");
+        for (i in sortArray) {
+            document.write(sortArray[i] + " ");
+        }
+        sortArray.sort((a, b) => a - b);
+        document.write("<br>After sort Ascending order: ");
+        for (i in sortArray) {
+            document.write(sortArray[i] + " ");
+        }
+        sortArray.sort((a, b) => b - a);
+        document.write("<br>After sort Descending order: ");
+        for (i in sortArray) {
+            document.write(sortArray[i] + " ");
+        }
+
+        // Array fill
+        document.write("<br><br>Array Fill Examples<br>");
+        const fillArray = new Array(5).fill("Hello");
+        document.write("Original Array: <br>");
+        for (i in fillArray) {
+            document.write(fillArray[i] + "<br>");
+        }
+        fillArray.fill("World", 1, 4);
+        document.write("After fill method from index 1 to 4: <br>");
+        for (i in fillArray) {
+            document.write(fillArray[i] + "<br>");
+        }
+
+        // Array includes
+        document.write("<br>Array Includes Examples<br>");
+        const includeArray = ["apple", "banana", "orange"];
+        document.write("Original Array: ");
+        for (i in includeArray) {
+            document.write("<li>" + includeArray[i] + "</li>");
+        }
+        const includesApple = includeArray.includes("apple");
+        document.write("Does the array include 'apple'? " + includesApple + "<br>");
+        const includesBanana = includeArray.includes("banana");
+        document.write("Does the array include 'banana'? " + includesBanana + "<br>");
+        const includesGrapes = includeArray.includes("grapes");
+        document.write("Does the array include 'grapes'? " + includesGrapes + "<br>");
+
+        // Array find
+        document.write("<br>Array Find Examples<br>");
+        const findArray = [5, 12, 8, 130, 44];
+        document.write("Original Array: ");
+        for (i in findArray) {
+            document.write("<li>" + findArray[i] + "</li>");
+        }
+        const foundElement = findArray.find(element => element > 100);
+        document.write("First element greater than 100: " + foundElement + "<br>");
+
+        // Array findIndex
+        document.write("<br>Array FindIndex Examples<br>");
+        const findIndexArray = [5, 12, 8, 130, 44];
+        document.write("Original Array: ");
+        for (i in findIndexArray) {
+            document.write("<li>" + findIndexArray[i] + "</li>");
+        }
+        const foundIndex = findIndexArray.findIndex(element => element > 100);
+        document.write("Index of first element greater than 100: " + foundIndex + "<br>");
+
+        // Array filter
+        document.write("<br>Array Filter Examples<br>");
+        const filterArray = [5, 12, 8, 130, 44];
+        document.write("Original Array: ");
+        for (i in filterArray) {
+            document.write("<li>" + filterArray[i] + "</li>");
+        }
+        const filteredArray = filterArray.filter(element => element > 10);
+        document.write("Elements greater than 10: ");
+        for (i in filteredArray) {
+            document.write("<li>" + filteredArray[i] + "</li>");
+        }
+
+        // Array map
+        document.write("<br>Array Map Examples<br>");
+        const mapArray = [1, 2, 3, 4, 5];
+        document.write("Original Array: ");
+        for (i in mapArray) {
+            document.write("<li>" + mapArray[i] + "</li>");
+        }
+        const mappedArray = mapArray.map(element => element * element);
+        document.write("After map method (each element square): ");
+        for (i in mappedArray) {
+            document.write("<li>" + mappedArray[i] + "</li>");
+        }
+
+        // Array reduce
+        document.write("<br>Array Reduce Examples<br>");
+        const reduceArray = [1, 2, 3, 4, 5];
+        document.write("Original Array: ");
+        for (i in reduceArray) {
+            document.write("<li>" + reduceArray[i] + "</li>");
+        }
+        const reducedValue = reduceArray.reduce((accumulator, currentValue) => accumulator + currentValue);
+        document.write("Sum of all elements: " + reducedValue + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
