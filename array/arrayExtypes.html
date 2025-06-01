@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+    <script>
+        const cars =["BMW","Mercedes","Honda","Scopio"];
+        document.write("<h3>Type 1 to print array (for loop)</h3>");
+        for (i = 0; i < 4;i++){
+            document.write("<li>",cars[i],"</li>");
+        }
+        document.write("<hr>");
+        document.write("<h3>Type 2 to print array (for .. in )</h3>");
+        for (car in cars){
+            document.write("<li>",cars[car],"</li>");
+        }
+        document.write("<hr>");
+        document.write("<h3>Type 3 to print array (for .. of )</h3>");
+        for (car of cars){
+            document.write("<li>",car,"</li>");
+        }
+        document.write("<hr>");
+        document.write("<h3>Examples</h3>");
+        document.write("<hr>");
+        const colors = new Array("red", "green", "blue");
+        document.write("<h3>Color array print by for..in </h3>");
+        for (i in colors){
+            document.write("<li>",colors[i],"</li>");
+        }
+        document.write("<hr>"); 
+        const mixedArray = [1, "apple", { name: "John" }, [2, 3, 4]];
+        document.write("<h3>Mixed Array print by for..of</h3>");
+        for(mix of mixedArray){
+            document.write("<li>",mix,"</li>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
