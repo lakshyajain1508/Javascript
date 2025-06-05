@@ -15,7 +15,41 @@
             margin-bottom: 20px;
         }
     </style>
-    <script src="js/marks.js"></script>
+    <script>
+
+        function marks(event){
+    event.preventDefault();
+    var eng = parseInt(document.getElementById("english").value);
+    var phy = parseInt(document.getElementById("physics").value);
+    var chem = parseInt(document.getElementById("chem").value);
+    var math = parseInt(document.getElementById("maths").value);
+    var comp = parseInt(document.getElementById("comp").value);
+
+    add = +eng + +phy + +chem + +math + +comp;
+    perc = (add*100/600);
+    document.getElementById("add").innerHTML = add;
+    document.getElementById("perc").innerHTML = perc;
+    total_grade = document.getElementById("grade");
+    
+
+
+    if(perc>80)
+    {
+        total_grade.innerHTML = "Grade A";
+    }
+    else if(perc>60)
+    {
+        total_grade.innerHTML = "Grade B";
+    }
+    else{
+        total_grade.innerHTML = "Grade C";
+    }
+
+    
+}
+
+
+    </script>
 </head>
 
 <body class="bg-tertiary">
@@ -50,7 +84,7 @@
             <div class="col-sm-4  border border-1 p-3 bg-light">
                 <h3 class="fs-2">Check Your Result </h3>
                 <h4 class="pt-4 fs-3 text-danger">Total Marks = <span id="add"></span></h4>
-                <h4 class="pt-4 fs-3 text-danger">Total Percentage = <span id="perc"></span></h4>
+                <h4 class="pt-4 fs-3 text-danger">Total Percentage = <span id="perc"></span>%</h4>
                 <h4 class="pt-4 fs-3 text-danger">Grade Obtained = <span id="grade"></span></h4>
             </div>
         </div>
