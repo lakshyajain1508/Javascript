@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Project</title>
+    <script>
+
+        function print_result() {
+
+            let number1 = document.getElementById("n1").value;
+            let number2 = document.getElementById("n2").value;
+            let operator = document.getElementById("opp").value;
+
+            print = document.getElementById("result");
+
+
+            switch (operator) {
+                case '+': print.innerHTML = +number2 + +number1;
+                    break;
+                case '-': print.innerHTML = number2 - number1;
+                    break;
+                case '*': print.innerHTML = number2 * number1;
+                    break;
+                case '/': print.innerHTML = number2 / number1;
+                    break;
+                default: alert("select one");
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+    <h4>Number 1 - 
+    <input type="text" id="n1"></h4>
+    <h4 style="margin-left: 90px;"><select id="opp">
+        <option selected>Select One</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">X</option>
+    </select></h4>
+    <h4>Number 2 -
+    <input type="text" id="n2"></h4>
+
+    <h2>Result =  <span id="result"></span></h2>
+    <button onclick="print_result()">get result</button>
+
+
+</body>
+
+</html>
