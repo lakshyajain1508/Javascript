@@ -1,4 +1,4 @@
-# 5. JavaScript Operators and Arithmetic operators
+# JavaScript Operators and Arithmetic operators
 
 JavaScript operators are symbols or keywords used to perform operations on variables and values. They allow you to manipulate data and perform computations in your JavaScript code. JavaScript operators can be categorized into several types, including arithmetic, comparison, logical, assignment, and more. Here, I'll provide an overview of the most common types of JavaScript operators:
 
