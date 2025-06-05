@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Scope</title>
+    <script>
+
+        // nested scope: Functions can be nested within other functions, creating nested or lexical scope. Inner functions can access variables from their parent functions, but the reverse is not true.
+
+        function info(){
+
+            var bank = "Yes Bank";
+
+            function customer_info(){
+
+                console.log("Bank Name : "+bank);
+                var name = "Lakshya Jain";
+                const Acc = 344201500004213;
+                console.log("Name : "+name);
+                console.log("Account No. : "+Acc); 
+
+            }
+
+            customer_info();
+        }
+        info();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
