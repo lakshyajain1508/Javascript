@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <script>
+
+        // The map() method is used to transform each element of an array into a new value and create a new array with the results.
+        const numbers = [1, 2, 3, 4, 5];
+
+        const squaredNumbers = numbers.map((number)=> {
+            return number * number;
+        });
+        console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+
+        // The filter() method is used to create a new array containing elements that meet a specific condition.
+        const number = [1, 2, 3, 4, 5];
+
+        const evenNumbers = numbers.filter( (number) => {
+            return number % 2 === 0;
+        });
+
+        console.log(evenNumbers); // [2, 4]
+
+        // The reduce() method is used to reduce an array into a single value based on an accumulator and a provided function.
+
+        const num = [2,4,6,8,10]
+        const sum = num.reduce((num1,num2)=>{
+            return num1 + num2;
+        });
+
+        console.log(sum); // 30
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
