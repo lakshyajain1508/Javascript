@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Loop</title>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30
+        };
+
+        console.log("----for...in----");
+
+        for (let key in person) {
+            console.log(key + ": " + person[key]);
+        }
+
+        console.log("----for...of----")
+
+        const colors = ["red", "green", "blue"];
+
+        for (let color of colors) {
+            console.log(color);
+        }
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
